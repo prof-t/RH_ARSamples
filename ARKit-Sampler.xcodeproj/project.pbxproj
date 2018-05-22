@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00D5679420B3917D00D40759 /* Dice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D5679320B3917D00D40759 /* Dice.swift */; };
+		00D5679620B391B400D40759 /* PlaneNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D5679520B391B400D40759 /* PlaneNode.swift */; };
+		00D5679820B391E700D40759 /* RecordingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D5679720B391E700D40759 /* RecordingButton.swift */; };
+		00D5679A20B3922800D40759 /* DiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D5679920B3922800D40759 /* DiceViewController.swift */; };
+		00D5679C20B3926100D40759 /* Dice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00D5679B20B3926100D40759 /* Dice.storyboard */; };
 		4F5AA0984FD0409AEB73AC4E /* Pods_ARKit_Sampler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B6FA6DDC58BD46FBC840EC1 /* Pods_ARKit_Sampler.framework */; };
 		8A086D941F71941C00951ABF /* RootViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A086D931F71941C00951ABF /* RootViewCell.swift */; };
 		8A086D971F71968C00951ABF /* Simple.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A086D961F71968C00951ABF /* Simple.storyboard */; };
@@ -57,6 +62,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00D5679320B3917D00D40759 /* Dice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dice.swift; sourceTree = "<group>"; };
+		00D5679520B391B400D40759 /* PlaneNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneNode.swift; sourceTree = "<group>"; };
+		00D5679720B391E700D40759 /* RecordingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingButton.swift; sourceTree = "<group>"; };
+		00D5679920B3922800D40759 /* DiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceViewController.swift; sourceTree = "<group>"; };
+		00D5679B20B3926100D40759 /* Dice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dice.storyboard; sourceTree = "<group>"; };
 		1F13E8C5860DBEF1BD063CF8 /* Pods-ARKit-Sampler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARKit-Sampler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARKit-Sampler/Pods-ARKit-Sampler.debug.xcconfig"; sourceTree = "<group>"; };
 		7B6FA6DDC58BD46FBC840EC1 /* Pods_ARKit_Sampler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARKit_Sampler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A086D931F71941C00951ABF /* RootViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewCell.swift; sourceTree = "<group>"; };
@@ -122,6 +132,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00D5679220B3916B00D40759 /* Dice */ = {
+			isa = PBXGroup;
+			children = (
+				00D5679320B3917D00D40759 /* Dice.swift */,
+				00D5679520B391B400D40759 /* PlaneNode.swift */,
+				00D5679720B391E700D40759 /* RecordingButton.swift */,
+				00D5679920B3922800D40759 /* DiceViewController.swift */,
+				00D5679B20B3926100D40759 /* Dice.storyboard */,
+			);
+			path = Dice;
+			sourceTree = "<group>";
+		};
 		297F2017A339FCD6D3645863 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +164,7 @@
 		8A086D951F71967800951ABF /* Samples */ = {
 			isa = PBXGroup;
 			children = (
+				00D5679220B3916B00D40759 /* Dice */,
 				8A9C49B71F71AC6600C8CB69 /* Simple */,
 				8A9C49B81F71AC7F00C8CB69 /* PlaneDetection */,
 				8A9C49BA1F71AC9100C8CB69 /* VirtualObject */,
@@ -401,6 +424,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00D5679C20B3926100D40759 /* Dice.storyboard in Resources */,
 				8ADD3E791FF16CE500D988BD /* ARFaceSimple.storyboard in Resources */,
 				8A086DAC1F71A08900951ABF /* VirtualObject.storyboard in Resources */,
 				8A8921D41F718E040087C2B0 /* LaunchScreen.storyboard in Resources */,
@@ -481,6 +505,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00D5679820B391E700D40759 /* RecordingButton.swift in Sources */,
+				00D5679620B391B400D40759 /* PlaneNode.swift in Sources */,
 				8AAECE141F7850D600C20BF9 /* ARMetalImageView.swift in Sources */,
 				8A9C49D51F71C5D900C8CB69 /* ARObjectDetectionViewController.swift in Sources */,
 				8A086DA31F7198D900951ABF /* SceneKitUtils.swift in Sources */,
@@ -502,11 +528,13 @@
 				8A9C49D61F71C5D900C8CB69 /* TagNode.swift in Sources */,
 				8A783E542078D44B00B3A2D0 /* ShapedPlaneViewController.swift in Sources */,
 				8A430D352020D15400B646D3 /* ARSCNProgramShader.metal in Sources */,
+				00D5679420B3917D00D40759 /* Dice.swift in Sources */,
 				8A086DA21F7198D900951ABF /* Common.swift in Sources */,
 				8A9C49E51F71CD0D00C8CB69 /* MetalImageView.swift in Sources */,
 				8A430D312020D11E00B646D3 /* ARSCNProgramViewController.swift in Sources */,
 				8A8921DC1F7190010087C2B0 /* RootViewController.swift in Sources */,
 				8A9C49C01F71ACAF00C8CB69 /* ARInteractionViewController.swift in Sources */,
+				00D5679A20B3922800D40759 /* DiceViewController.swift in Sources */,
 				8A086D941F71941C00951ABF /* RootViewCell.swift in Sources */,
 				8A9C49E21F71CD0D00C8CB69 /* ARMetalViewController.swift in Sources */,
 				8A9C49C31F71B12D00C8CB69 /* VirtualObjectNode.swift in Sources */,

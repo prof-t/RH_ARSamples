@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w4I-h3-Tz0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dice View Controller-->
+        <scene sceneID="5fs-gH-0FR">
+            <objects>
+                <viewController id="w4I-h3-Tz0" customClass="DiceViewController" customModule="ARKit_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bK9-UR-O5P" customClass="ARSCNView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view alpha="0.60000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VnT-Wy-cgK">
+                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xVQ-d8-0eX">
+                                        <rect key="frame" x="100" y="34.5" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="floorSwitchChanged:" destination="w4I-h3-Tz0" eventType="valueChanged" id="Zp2-dB-Mby"/>
+                                        </connections>
+                                    </switch>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" maximumValue="100" stepValue="0.050000000000000003" translatesAutoresizingMaskIntoConstraints="NO" id="faV-Dc-TJr">
+                                        <rect key="frame" x="261" y="35.5" width="94" height="29"/>
+                                        <connections>
+                                            <action selector="sizeStepperChanged:" destination="w4I-h3-Tz0" eventType="valueChanged" id="fLg-55-NPd"/>
+                                        </connections>
+                                    </stepper>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.20m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eK-0G-uyb">
+                                        <rect key="frame" x="154" y="40" width="102" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="xVQ-d8-0eX" firstAttribute="leading" secondItem="VnT-Wy-cgK" secondAttribute="leading" constant="100" id="4UB-7x-CbX"/>
+                                    <constraint firstItem="xVQ-d8-0eX" firstAttribute="centerY" secondItem="VnT-Wy-cgK" secondAttribute="centerY" id="8IW-es-cAK"/>
+                                    <constraint firstItem="8eK-0G-uyb" firstAttribute="centerY" secondItem="VnT-Wy-cgK" secondAttribute="centerY" id="Tke-uU-T7X"/>
+                                    <constraint firstItem="faV-Dc-TJr" firstAttribute="centerY" secondItem="VnT-Wy-cgK" secondAttribute="centerY" id="d6W-2O-nQm"/>
+                                    <constraint firstAttribute="trailing" secondItem="faV-Dc-TJr" secondAttribute="trailing" constant="20" id="dLT-tX-7zF"/>
+                                    <constraint firstAttribute="height" constant="100" id="dhz-p1-HKO"/>
+                                    <constraint firstItem="faV-Dc-TJr" firstAttribute="leading" secondItem="8eK-0G-uyb" secondAttribute="trailing" constant="5" id="eKm-9R-lKj"/>
+                                    <constraint firstItem="8eK-0G-uyb" firstAttribute="leading" secondItem="xVQ-d8-0eX" secondAttribute="trailing" constant="5" id="woR-0h-v9q"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.39165606739999997" green="0.59924448119999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VnT-Wy-cgK" firstAttribute="trailing" secondItem="0X5-rg-T7C" secondAttribute="trailing" id="9Jn-vM-Cdc"/>
+                            <constraint firstItem="VnT-Wy-cgK" firstAttribute="bottom" secondItem="0X5-rg-T7C" secondAttribute="bottom" id="nOW-YT-gYU"/>
+                            <constraint firstItem="VnT-Wy-cgK" firstAttribute="leading" secondItem="0X5-rg-T7C" secondAttribute="leading" id="vp5-mD-SVQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0X5-rg-T7C"/>
+                    </view>
+                    <connections>
+                        <outlet property="floorSwitch" destination="xVQ-d8-0eX" id="yHN-DQ-dlJ"/>
+                        <outlet property="sceneView" destination="bK9-UR-O5P" id="YTp-Os-M5Y"/>
+                        <outlet property="sizeLabel" destination="8eK-0G-uyb" id="hRc-Rs-lw6"/>
+                        <outlet property="sizeStepper" destination="faV-Dc-TJr" id="QYj-qZ-ziJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KsE-zn-xvz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="109.59999999999999" y="33.733133433283363"/>
+        </scene>
+    </scenes>
+</document>
