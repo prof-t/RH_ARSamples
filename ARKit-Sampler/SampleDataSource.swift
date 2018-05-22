@@ -69,9 +69,12 @@ struct SampleDataSource {
             classPrefix: "ARSCNProgram"
         ),
         Sample(
-            title: "Simple Face Tracking",
-            detail: "Simplest Face-Based AR implementation.",
-            classPrefix: "ARFaceSimple"
+            title: "Dice",
+            detail: "Detect Horizontal, and Dice to rolls.",
+            classPrefix: "Dice"
+//            title: "Simple Face Tracking",
+//            detail: "Simplest Face-Based AR implementation.",
+//            classPrefix: "ARFaceSimple"
         ),
         Sample(
             title: "Vertical Plane Detection",
